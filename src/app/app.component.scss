@@ -1,0 +1,329 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.socialpost-wrapper {
+    overflow: hidden;
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    background: #ffffff;
+}
+.socialpost-background {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Container */
+.content {
+    max-width: 297mm; /* A4 paper width */
+    margin: 0 auto;
+    padding: 10mm;
+}
+/* Organization logo */
+.org-logo {
+    position: absolute;
+    left: 0mm;
+    width:60mm;
+    height: 30mm;
+    bottom: 0mm;
+}
+.org-logo img{
+    height :100%;
+    width: 100%;
+}
+/* Organization name */
+.org-name h2 {
+    position: absolute;
+    right: 0mm;
+   top: 270mm;
+    height: 20mm;
+    width: 140mm;
+    font-size: 24px;
+    
+}
+.org-address {
+    position: absolute;
+    background-color: black;
+    right:0mm;
+    top:236mm;
+    width:110mm;
+    height:20mm;
+   
+}
+.org-address p{
+    margin-left:20mm;
+    text-align: left;
+    font-size:12px;
+    color:#ffffff;
+    font-weight: bolder;
+}
+/* Organization email, phone, fax, and website */
+.org-email,
+.org-alternate-email,
+.org-phone,
+.org-alternate-phone,
+.org-fax,
+.org-website {
+    margin: 5mm 0;
+}
+.org-email {
+    position: absolute;
+    right: 20mm;
+    bottom: 0mm;
+    height: 5mm;
+    width: 50mm;
+}
+.org-email i {
+    font-size: 1.5em;
+}
+.org-website {
+    position: absolute;
+    right: 75mm;
+    bottom: 0mm;
+    height: 5mm;
+    width: 50mm;
+}
+.org-website i {
+    font-size: 1.5em;
+}
+.org-phone {
+    position: absolute;
+    right:0mm;
+    top:250mm;
+    width:110mm;
+    height:20mm;
+    font-size:42px;
+    color:red;
+    text-align: justify;
+    font-weight: bolder;
+   
+}
+.org-phone i {
+    font-size: 1.5em;
+}
+/* Header background image */
+.header-background-image img {
+    width: 100%;
+}
+/* Background image, image, alternate image */
+.background-image img,
+.image img,
+.alternate-image img {
+    width: 100%;
+}
+.background-image img{
+    position:absolute;
+    left:0mm;
+    top:00mm;
+    width:210mm;
+    height:120mm;
+}
+.image img{
+    position:absolute;
+    left:0mm;
+    top:00mm;
+    width:120mm;
+    height:30mm;
+}
+/* Heading, sub-heading, description, punchlines, offerlines */
+.heading,
+.sub-heading,
+.description,
+.punchline1,
+.punchline2,
+.offerline1,
+.offerline2 {
+    margin: 5mm 0;
+}
+.punchline1{
+    position:absolute;
+    left:0mm;
+    top:30mm;
+    width:120mm;
+    height:10mm;
+    font-weight: bold;
+    text-align: center;
+    font-size: 36px;
+   color:#ffffff;
+}
+.heading {
+    position:absolute;
+    left:0mm;
+    top:40mm;
+    width:120mm;
+    height:30mm;
+    text-align: left;
+    font-size: 56px;
+    font-weight: bolder;
+    color:#FFDC5B;
+}
+.sub-heading{
+    position:absolute;
+    left:0mm;
+    top:120mm;
+    width:90mm;
+    height:10mm;
+    font-weight: bold;
+    text-align: left;
+    font-size: 24px;
+}
+
+.description {
+    position:absolute;
+    left:0mm;
+    top:130mm;
+    width:90mm;
+    height:50mm;
+    text-align: justify;
+    font-size: 16px;
+}
+/* Services heading */
+.services-heading {
+    margin-top: 0%;
+}
+
+/* Services */
+.services {
+    position:absolute;
+    background-color:black;
+    right:0mm;
+    top:125mm;
+    width:110mm;
+    height:55mm;
+    color:#ffffff;
+}
+
+/* Service */
+.service {
+    width:90mm;
+    height:10mm;
+	
+}
+
+/* Service name */
+.service-name {
+    position: absolute;
+    margin-left:20mm;
+    font-weight: bold;
+    text-align: left;
+    font-size: 24px;
+    color:#ffffff;
+}
+
+/* Service image */
+.service-image i {
+    font-size: 2em;
+}
+
+/* Service description */
+.service-description {
+    margin-top: 10mm;
+    position: absolute;
+    text-align: left;
+    font-size: 18px;
+    color:#ffffff;
+    margin-left:20mm;
+    text-wrap: balance;
+}
+
+/* Features heading */
+.features-heading {
+	    position:absolute;
+    left:0mm;
+    top:180mm;
+    width:90mm;
+    height:10mm;
+    font-weight: bold;
+    text-align: left;
+    font-size: 24px;
+}
+
+/* Features */
+.features {
+	position:absolute;
+    left:0mm;
+    top:190mm;
+    width:90mm;
+    height:70mm;
+}
+
+/* Feature */
+.feature {
+    margin-left: 20mm;
+    width:90mm;
+    height:10mm;
+	font-weight: 200;
+    text-align: left;
+    font-size: 18px;
+}
+
+/* Feature name */
+.feature-name {
+    font-weight:100;
+}
+
+/* Feature image */
+.feature-image i {
+    font-size: 2em;
+}
+
+/* Feature description */
+.feature-description {
+    margin-top: 5mm;
+}
+
+/* Terms heading */
+.terms-heading {
+    position: absolute;
+    top: 183mm;
+    height: 10mm;
+    right: 0mm;
+    width:110mm;
+    font-weight: bold;
+    margin-left:20mm;
+    text-align: center;
+    font-size: 24px;
+    background-color:black;
+    color:#ffffff;
+}
+
+/* Terms */
+.terms {
+    position: absolute;
+    background-color:black;
+    right:0mm;
+    top:193mm;
+    width:110mm;
+    height:40mm;
+}
+    
+
+/* Term */
+.term {
+    font-weight:100;
+    margin-top:5mm;
+   
+}
+.term-name {
+    text-align: left;
+    font-size: 18px;
+    color:#ffffff;
+    margin-left:20mm;
+    text-wrap: balance;
+   
+}
+/* Term image */
+.term-image i {
+    font-size: 2em;
+}
+
+/* Term description */
+.term-description {
+    margin-top: 5mm;
+}
