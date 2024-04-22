@@ -1,0 +1,86 @@
+<div class="socialpost-wrapper">
+  <div class="socialpost-background">
+      <div class="content">
+          <div class="org-logo">
+              <img [src]="content.orgLogo" alt="Logo">
+          </div>
+          <div class="org-name">
+              <h2>{{ content.orgName }}</h2>
+          </div>
+          <div class="org-tagline">{{ content.orgTagline }}</div>
+          <div class="org-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <p [innerHTML]="content.orgAddress"></p>
+          </div>
+          <div class="org-email">
+              <i class="fas fa-envelope"></i>
+              {{ content.orgEmail }}
+          </div>
+          <div class="org-alternate-email">
+              <i class="fas fa-envelope"></i>
+              {{ content.orgAlternateEmail }}
+          </div>
+          <div class="org-phone">
+              <i class="fas fa-whatsapp"></i>
+              {{ content.orgPhone }}
+          </div>
+          <div class="org-alternate-phone">
+              <i class="fas fa-phone"></i>
+              {{ content.orgAlternatePhone }}
+          </div>
+          <div class="org-fax">
+              <i class="fas fa-fax"></i>
+              {{ content.orgFax }}
+          </div>
+          <div class="org-website">
+              <i class="fas fa-globe"></i>
+              {{ content.orgWebsite }}
+          </div>
+          <div class="header-background-image">
+              <!-- You can handle header background image if necessary -->
+          </div>
+          <div class="background-image" *ngFor="let image of content.backgroundImages">
+              <img [src]="image" alt="Background">
+          </div>
+          <div class="image">
+              <!-- This is where you can handle the main image -->
+              <img [src]="content.orgLogo" alt="Organization Image">
+          </div>
+          <div class="heading">{{ content.heading }}</div>
+          <div class="sub-heading">{{ content.subHeading }}</div>
+          <div class="description">{{ content.description }}</div>
+          <div class="punchline1">{{ content.punchline1 }}</div>
+          <div class="punchline2">{{ content.punchline2 }}</div>
+          <div class="offerline1">{{ content.offerline1 }}</div>
+          <div class="offerline2">{{ content.offerline2 }}</div>
+
+          <div class="services-heading">{{ content.servicesHeading }}</div>
+          <div class="services">
+              <div class="service" *ngFor="let service of content.services">
+                  <div class="service-name">{{ service.name }}</div>
+                  <div class="service-image"><i class="{{ service.image }}"></i></div>
+                  <div class="service-description">{{ service.description }}</div>
+              </div>
+          </div>
+
+          <div class="features-heading">{{ content.featuresHeading }}</div>
+          <div class="features">
+              <div class="feature" *ngFor="let feature of content.features">
+                  <div class="feature-name">{{ feature.name }}</div>
+                  <div class="feature-image"><i class="{{ feature.image }}"></i></div>
+                  <div class="feature-description">{{ feature.description }}</div>
+              </div>
+          </div>
+
+          <div class="terms-heading">{{ content.termsHeading }}</div>
+          <div class="terms">
+              <div class="term" *ngFor="let term of content.terms">
+                  <div class="term-name">{{ term.name }}</div>
+                  <div class="term-image"><i class="{{ term.image }}"></i></div>
+                  <div class="term-description">{{ term.description }}</div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+ <!--<router-outlet></router-outlet> -->
