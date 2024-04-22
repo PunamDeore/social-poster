@@ -1,5 +1,10 @@
 // social-post-content.ts
 
+import { Injectable } from "@angular/core";
+
+@Injectable({
+    providedIn: 'root'
+})
 export class SocialPostContent {
     orgLogo: string;
     orgName: string;
