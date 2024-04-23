@@ -1,4 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css");
 
 .socialpost-wrapper {
     overflow: hidden;
@@ -20,7 +22,7 @@ body {
     padding: 0;
 }
 /* Container */
-.content {
+.socialpost-content {
     max-width: 297mm; /* A4 paper width */
     margin: 0 auto;
     padding: 10mm;
@@ -41,7 +43,7 @@ body {
 .org-name h2 {
     position: absolute;
     right: 0mm;
-   top: 270mm;
+   top: 280mm;
     height: 20mm;
     width: 140mm;
     font-size: 24px;
@@ -191,29 +193,30 @@ body {
 /* Services */
 .services {
     position:absolute;
-    background-color:black;
     right:0mm;
     top:125mm;
     width:110mm;
-    height:55mm;
-    color:#ffffff;
+    height:110mm;
+    
 }
 
 /* Service */
 .service {
-    width:90mm;
-    height:10mm;
-	
+    width:110mm;
+    height:50mm;
+    background-color:black;
+	color:#ffffff;
+    margin-bottom: 5mm;
 }
 
 /* Service name */
 .service-name {
-    position: absolute;
+
     margin-left:20mm;
     font-weight: bold;
     text-align: left;
-    font-size: 24px;
-    color:#ffffff;
+    font-size: 18px;
+
 }
 
 /* Service image */
@@ -223,11 +226,9 @@ body {
 
 /* Service description */
 .service-description {
-    margin-top: 10mm;
-    position: absolute;
+
     text-align: left;
     font-size: 18px;
-    color:#ffffff;
     margin-left:20mm;
     text-wrap: balance;
 }
@@ -236,7 +237,7 @@ body {
 .features-heading {
 	    position:absolute;
     left:0mm;
-    top:180mm;
+    top:187mm;
     width:90mm;
     height:10mm;
     font-weight: bold;
@@ -248,14 +249,13 @@ body {
 .features {
 	position:absolute;
     left:0mm;
-    top:190mm;
+    top:195mm;
     width:90mm;
     height:70mm;
 }
 
 /* Feature */
 .feature {
-    margin-left: 20mm;
     width:90mm;
     height:10mm;
 	font-weight: 200;
@@ -264,7 +264,11 @@ body {
 }
 
 /* Feature name */
+.feature-icon {
+    font-weight:100;
+}
 .feature-name {
+    margin-left:20mm;
     font-weight:100;
 }
 
@@ -281,26 +285,11 @@ body {
 /* Terms heading */
 .terms-heading {
     position: absolute;
-    top: 183mm;
-    height: 10mm;
-    right: 0mm;
-    width:110mm;
-    font-weight: bold;
-    margin-left:20mm;
-    text-align: center;
-    font-size: 24px;
-    background-color:black;
-    color:#ffffff;
 }
 
 /* Terms */
 .terms {
     position: absolute;
-    background-color:black;
-    right:0mm;
-    top:193mm;
-    width:110mm;
-    height:40mm;
 }
     
 
@@ -312,10 +301,6 @@ body {
 }
 .term-name {
     text-align: left;
-    font-size: 18px;
-    color:#ffffff;
-    margin-left:20mm;
-    text-wrap: balance;
    
 }
 /* Term image */

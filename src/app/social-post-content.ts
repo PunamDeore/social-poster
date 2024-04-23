@@ -57,26 +57,29 @@ export class SocialPostContent {
         this.services = [
             {
                 name: 'FREE MONTHLY TECHNICAL WORKSHOP',
-                image: 'fas fa-list',
+                image: '',
                 description: 'Embark on a journey into Future Tech: Join our Monthly Workshops for AI Industry Updates, Hands-On Experiences, and Expert Insights. Stay ahead in the ever-evolving tech landscape with us!'
+            },
+            {
+                name: 'MEMBERSHIP FEES:',
+                image: '',
+                description:  'bi bi-clock 4 hours: ₹2000/month bi bi-clock 8 hours: ₹4000/month bi bi-laptop Laptop: ₹1000/month' ,
             }
+
         ];
         this.featuresHeading = 'FACILITIES';
         this.features = [
-            { name: 'Free WiFi', image: 'bi bi-wifi', description: '' },
-            { name: 'Free Digital Library', image: 'bi bi-book', description: '' },
-            { name: 'Free Digital Courses', image: 'bi bi-book', description: '' },
-            { name: 'Free Workshops', image: 'bi bi-journal-check', description: 'P' },
-            { name: 'Free MCQ Bank (AI Based)', image: 'bi bi-journal-check', description: '' },
-            { name: 'PCs for Practice', image: 'bi bi-laptop', description: '' },
-            { name: 'AI Personal Tutor', image: 'bi bi-bot', description: '' }
+            { icon: 'bi bi-wifi', name: 'Free WiFi', image: '', description: '' },
+            { icon: 'bi bi-book', name: 'Free Digital Library', image: '', description: '' },
+            { icon: 'bi bi-book', name: 'Free Digital Courses', image: '', description: '' },
+            { icon: 'bi bi-journal-check', name: 'Free Workshops', image: '', description: '' },
+            { icon: 'bi bi-journal-check', name: 'Free MCQ Bank (AI Based)', image: '', description: '' },
+            { icon: 'bi bi-laptop', name: 'PCs for Practice', image: '', description: '' },
+            { icon: 'bi bi-bot', name: 'AI Personal Tutor', image: '', description: '' }
         ];
-        this.termsHeading = 'MEMBERSHIP FEES:';
-        this.terms = [
-            { name: '4 hours: ₹2000/month', image: 'bi bi-clock', description: '' },
-            { name: '8 hours: ₹4000/month', image: 'bi bi-clock', description: '' },
-            { name: 'Laptop: ₹1000/month', image: 'bi bi-laptop', description: '' }
-        ];
+        
+        this.termsHeading ='';
+        this.terms = [];
     }
 }
 
@@ -87,6 +90,7 @@ export interface Service {
 }
 
 export interface Feature {
+icon:string;
     name: string;
     image: string;
     description: string;

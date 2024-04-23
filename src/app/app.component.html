@@ -1,6 +1,8 @@
+
 <div class="socialpost-wrapper">
   <div class="socialpost-background">
-      <div class="content">
+</div>
+      <div class="socialpost-content">
           <div class="org-logo">
               <img [src]="content.orgLogo" alt="Logo">
           </div>
@@ -66,6 +68,7 @@
           <div class="features-heading">{{ content.featuresHeading }}</div>
           <div class="features">
               <div class="feature" *ngFor="let feature of content.features">
+                <div class="feature-icon">{{ feature.icon }}</div>
                   <div class="feature-name">{{ feature.name }}</div>
                   <div class="feature-image"><i class="{{ feature.image }}"></i></div>
                   <div class="feature-description">{{ feature.description }}</div>
@@ -82,5 +85,5 @@
           </div>
       </div>
   </div>
-</div>
+
  <!--<router-outlet></router-outlet> -->
