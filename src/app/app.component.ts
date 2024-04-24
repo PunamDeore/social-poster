@@ -33,6 +33,7 @@ export class AppComponent {
     servicesHeading: "",
     services: [
       {
+        icon:"",
         name: "FREE MONTHLY TECHNICAL WORKSHOP",
         image: "",
         description: "Embark on a journey into Future Tech: Join our Monthly Workshops for AI Industry Updates, Hands-On Experiences, and Expert Insights. Stay ahead in the ever-evolving tech landscape with us!"
@@ -81,21 +82,21 @@ export class AppComponent {
     offerline1: 'offerline1',
     offerline2: 'offerline2',
     servicesHeading: 'services-heading',
-    services: [], // Should be an array or remove it if unnecessary
+    services: 'services', // Should be an array or remove it if unnecessary
     service: 'service',
     serviceIcon: '',
     serviceName: 'service-name',
     serviceImage: 'service-image',
     serviceDescription: 'service-description',
     featuresHeading: 'features-heading',
-    features: [], // Should be an array or remove it if unnecessary
+    features: 'features', // Should be an array or remove it if unnecessary
     Feature: 'feature',
     featureIcon: 'feature-icon',
     FeatureName: 'feature-name',
     FeatureImage: 'feature-image',
     FeatureDescription: 'feature-description',
     termsHeading: 'terms-heading',
-    terms: [], // Should be an array or remove it if unnecessary
+    terms: 'terms', // Should be an array or remove it if unnecessary
     term: 'term',
     Icon: '',
     Name: 'term-name',

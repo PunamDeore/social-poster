@@ -75,9 +75,9 @@
       <div [ngClass]="config.services">
         <div *ngFor="let service of Data.services" [ngClass]="config.service">
           <!-- Display service image -->
-          <div [ngClass]="config.serviceIcon">{{ service.image }}</div>
-          <!-- Display service name -->
-          <div [ngClass]="config.serviceName">{{ service.name }}</div>
+          <i class="{{ service.icon }}"></i> 
+  <span>{{ service.name }}</span>
+          <div [ngClass]="config.serviceImage">{{ service.image }}</div>
           <!-- Display service description -->
           <div [ngClass]="config.serviceDescription">{{ service.description }}</div>
         </div>
@@ -89,9 +89,8 @@
       <div [ngClass]="config.features">
         <div *ngFor="let feature of Data.features" [ngClass]="config.Feature">
           <!-- Display feature icon -->
-          <div [ngClass]="config.featureIcon">{{ feature.featureIcon }}</div>
-          <!-- Display feature name -->
-          <div [ngClass]="config.FeatureName">{{ feature.FeatureName }}</div>
+          <i class="{{ feature.featureIcon }}"></i> 
+  <span>{{ feature.FeatureName }}</span>
           <!-- Display feature description -->
           <div [ngClass]="config.FeatureDescription">{{ feature.FeatureDescription }}</div>
         </div>
@@ -103,9 +102,8 @@
       <div [ngClass]="config.terms">
         <div *ngFor="let term of Data.terms" [ngClass]="config.term">
           <!-- Display term icon -->
-          <div [ngClass]="config.Icon">{{ term.Icon }}</div>
-          <!-- Display term name -->
-          <div [ngClass]="config.Name">{{ term.Name }}</div>
+          <i class="{{ term.Icon }}"></i> <!-- Assuming featureIcon contains Bootstrap icon classes -->
+          <span>{{ term.Name }}</span>
           <!-- Display term image -->
           <div [ngClass]="config.Image">{{ term.Image }}</div>
           <!-- Display term description -->
