@@ -1,89 +1,117 @@
-
 <div class="socialpost-wrapper">
-  <div class="socialpost-background">
-</div>
-      <div class="socialpost-content">
-          <div class="org-logo">
-              <img [src]="content.orgLogo" alt="Logo">
-          </div>
-          <div class="org-name">
-              <h2>{{ content.orgName }}</h2>
-          </div>
-          <div class="org-tagline">{{ content.orgTagline }}</div>
-          <div class="org-address">
-              <i class="bi bi-map-marker-alt"></i>
-              <p [innerHTML]="content.orgAddress"></p>
-          </div>
-          <div class="org-email">
-              <i class="bi bi-envelope"></i>
-              {{ content.orgEmail }}
-          </div>
-          <div class="org-alternate-email">
-              <i class="bi bi-envelope"></i>
-              {{ content.orgAlternateEmail }}
-          </div>
-          <div class="org-phone">
-              <i class="bi bi-whatsapp"></i>
-              {{ content.orgPhone }}
-          </div>
-          <div class="org-alternate-phone">
-              <i class="bi bi-phone"></i>
-              {{ content.orgAlternatePhone }}
-          </div>
-          <div class="org-fax">
-              <i class="bi bi-fax"></i>
-              {{ content.orgFax }}
-          </div>
-          <div class="org-website">
-              <i class="bi bi-globe"></i>
-              {{ content.orgWebsite }}
-          </div>
-          <div class="header-background-image">
-              <!-- You can handle header background image if necessary -->
-          </div>
-          <div class="background-image" *ngFor="let image of content.backgroundImages">
-              <img [src]="content.backgroundImages[0]" alt="Background">
-          </div>
-          <div class="image">
-              <!-- This is where you can handle the main image -->
-              <img [src]="content.backgroundImages[1]" alt="Organization Image">
-          </div>
-          <div class="heading">{{ content.heading }}</div>
-          <div class="sub-heading">{{ content.subHeading }}</div>
-          <div class="description">{{ content.description }}</div>
-          <div class="punchline1">{{ content.punchline1 }}</div>
-          <div class="punchline2">{{ content.punchline2 }}</div>
-          <div class="offerline1">{{ content.offerline1 }}</div>
-          <div class="offerline2">{{ content.offerline2 }}</div>
-
-          <div class="services-heading">{{ content.servicesHeading }}</div>
-          <div class="services">
-              <div class="service" *ngFor="let service of content.services">
-                  <div class="service-name">{{ service.name }}</div>
-                  <div class="service-image"><i class="{{ service.image }}"></i></div>
-                  <div class="service-description">{{ service.description }}</div>
-              </div>
-          </div>
-
-          <div class="features-heading">{{ content.featuresHeading }}</div>
-          <div class="features">
-              <div class="feature" *ngFor="let feature of content.features">
-                <div class="feature-icon">{{ feature.icon }}</div>
-                  <div class="feature-name">{{ feature.name }}</div>
-                  <div class="feature-image"><i class="{{ feature.image }}"></i></div>
-                  <div class="feature-description">{{ feature.description }}</div>
-              </div>
-          </div>
-
-          <div class="terms-heading">{{ content.termsHeading }}</div>
-          <div class="terms">
-              <div class="term" *ngFor="let term of content.terms">
-                  <div class="term-name">{{ term.name }}</div>
-                  <div class="term-image"><i class="{{ term.image }}"></i></div>
-                  <div class="term-description">{{ term.description }}</div>
-              </div>
-          </div>
+    <div class="socialpost-background"></div>
+    <div class="socialpost-content">
+      <!-- Display orgLogo -->
+      <div [ngClass]="config.orgLogo">
+        <img [src]="Data.orgLogo" alt="Logo">
       </div>
+      <!-- Display orgName -->
+      <div [ngClass]="config.orgName">
+        <h2>{{ Data.orgName }}</h2>
+      </div>
+      <!-- Display orgTagline -->
+      <div [ngClass]="config.orgTagline">{{ Data.orgTagline }}</div>
+      <!-- Display orgAddress -->
+      <div [ngClass]="config.orgAddress">
+        <i class="bi bi-map-marker-alt"></i>
+        <div [innerHTML]="Data.orgAddress"></div>
+      </div>
+      <!-- Display orgEmail -->
+      <div [ngClass]="config.orgEmail">
+        <i class="bi bi-envelope"></i>
+        {{ Data.orgEmail }}
+      </div>
+      <!-- Display orgAlternateEmail -->
+      <div [ngClass]="config.orgAlternateEmail">
+        <i class="bi bi-envelope"></i>
+        {{ Data.orgAlternateEmail }}
+      </div>
+      <!-- Display orgPhone -->
+      <div [ngClass]="config.orgPhone">
+        <i class="bi bi-whatsapp"></i>
+        {{ Data.orgPhone }}
+      </div>
+      <!-- Display orgAlternatePhone -->
+      <div [ngClass]="config.orgAlternatePhone">
+        <i class="bi bi-phone"></i>
+        {{ Data.orgAlternatePhone }}
+      </div>
+      <!-- Display orgFax -->
+      <div [ngClass]="config.orgFax">
+        <i class="bi bi-fax"></i>
+        {{ Data.orgFax }}
+      </div>
+      <!-- Display orgWebsite -->
+      <div [ngClass]="config.orgWebsite">
+        <i class="bi bi-globe"></i>
+        {{ Data.orgWebsite }}
+      </div>
+      <!-- Display backgroundImage -->
+      <div [ngClass]="config.backgroundImage">
+        <img [src]="Data.backgroundImage" alt="Background">
+      </div>
+      <!-- Display subBackgroundImage -->
+      <div [ngClass]="config.subBackgroundImage">
+        <img [src]="Data.subBackgroundImage" alt="Organization Image">
+      </div>
+      <!-- Display heading -->
+      <div [ngClass]="config.heading">{{ Data.heading }}</div>
+      <!-- Display subHeading -->
+      <div [ngClass]="config.subHeading">{{ Data.subHeading }}</div>
+      <!-- Display description -->
+      <div [ngClass]="config.description">{{ Data.description }}</div>
+      <!-- Display punchline1 -->
+      <div [ngClass]="config.punchline1">{{ Data.punchline1 }}</div>
+      <!-- Display punchline2 -->
+      <div [ngClass]="config.punchline2">{{ Data.punchline2 }}</div>
+      <!-- Display offerline1 -->
+      <div [ngClass]="config.offerline1">{{ Data.offerline1 }}</div>
+      <!-- Display offerline2 -->
+      <div [ngClass]="config.offerline2">{{ Data.offerline2 }}</div>
+  
+      <!-- Display servicesHeading -->
+      <div [ngClass]="config.servicesHeading">{{ Data.servicesHeading }}</div>
+      <!-- Iterate over services array -->
+      <div [ngClass]="config.services">
+        <div *ngFor="let service of Data.services" [ngClass]="config.service">
+          <!-- Display service image -->
+          <div [ngClass]="config.serviceIcon">{{ service.image }}</div>
+          <!-- Display service name -->
+          <div [ngClass]="config.serviceName">{{ service.name }}</div>
+          <!-- Display service description -->
+          <div [ngClass]="config.serviceDescription">{{ service.description }}</div>
+        </div>
+      </div>
+  
+      <!-- Display featuresHeading -->
+      <div [ngClass]="config.featuresHeading">{{ Data.featuresHeading }}</div>
+      <!-- Iterate over features array -->
+      <div [ngClass]="config.features">
+        <div *ngFor="let feature of Data.features" [ngClass]="config.Feature">
+          <!-- Display feature icon -->
+          <div [ngClass]="config.featureIcon">{{ feature.featureIcon }}</div>
+          <!-- Display feature name -->
+          <div [ngClass]="config.FeatureName">{{ feature.FeatureName }}</div>
+          <!-- Display feature description -->
+          <div [ngClass]="config.FeatureDescription">{{ feature.FeatureDescription }}</div>
+        </div>
+      </div>
+  
+      <!-- Display termsHeading -->
+      <div [ngClass]="config.termsHeading">{{ Data.termsHeading }}</div>
+      <!-- Iterate over terms array -->
+      <div [ngClass]="config.terms">
+        <div *ngFor="let term of Data.terms" [ngClass]="config.term">
+          <!-- Display term icon -->
+          <div [ngClass]="config.Icon">{{ term.Icon }}</div>
+          <!-- Display term name -->
+          <div [ngClass]="config.Name">{{ term.Name }}</div>
+          <!-- Display term image -->
+          <div [ngClass]="config.Image">{{ term.Image }}</div>
+          <!-- Display term description -->
+          <div [ngClass]="config.Description">{{ term.Description }}</div>
+        </div>
+      </div>
+    </div>
   </div>
-
- <!--<router-outlet></router-outlet> -->
+  
