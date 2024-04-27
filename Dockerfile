@@ -1,5 +1,5 @@
 # Use the official Node.js 17 image as a base image
-FROM node:17
+FROM node:21
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the Angular application
-RUN npm run build -- --prod
+RUN npm run build 
 
 # Expose the port your app runs on
 EXPOSE 80
