@@ -1,5 +1,11 @@
+<select [(ngModel)]="selectedDesignFolder" (change)="onDesignFolderChange($event)">
+  <option value="">Select Design Folder</option>
+  <option *ngFor="let folder of designFolders" [value]="folder">{{ folder }}</option>
+</select>
+
 <div class="socialpost-wrapper">
-    <div class="socialpost-background"></div>
+  <div [innerHTML]="socialPostTemplate"></div>
+    
     <div class="socialpost-content">
       <!-- Display orgLogo -->
       <div [ngClass]="config.orgLogo">

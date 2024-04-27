@@ -1,14 +1,62 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule,HttpClientModule,FormsModule],
+  providers: [HttpClientModule]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  designFolders: string[] = ['akanksha','dipak','jaiminkumar','kalpesh','punam', 'ketan', 'mayur', 'sagar','saurabh','shivani']; // Update with your actual design folder names
+  selectedDesignFolder: string = '';
+renderer: any;
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    // Initialize with the first design folder
+    if (this.designFolders.length > 0) {
+      this.selectedDesignFolder = this.designFolders[0];
+      this.loadHTMLTemplate(this.selectedDesignFolder);
+      this.loadCSS(this.selectedDesignFolder);
+    }
+  }
+
+  onDesignFolderChange(event: Event) {
+    const selectedValue = (event.target as HTMLSelectElement).value;
+    this.selectedDesignFolder = selectedValue;
+    this.loadHTMLTemplate(selectedValue);
+    this.loadCSS(selectedValue);
+  }
+
+  loadHTMLTemplate(selectedFolder: string) {
+    this.http.get(`assets/${selectedFolder}/index.html`, { responseType: 'text' }).subscribe((data) => {
+      // Update certificateTemplate with the loaded HTML
+      this.socialPostTemplate = data;
+    });
+  }
+
+  loadCSS(selectedFolder: string) {
+    const head = document.getElementsByTagName('head')[0];
+    const link = document.createElement('link');
+
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = `assets/${selectedFolder}/css/style.css`;
+    head.appendChild(link);
+   // this.renderer.appendChild(document.head, link);
+    
+  }
+
+  socialPostTemplate: string = '';
+
+
+
   Data = {
     orgLogo: "assets/img/org-logo.png",
     orgName: "Maha Mission Education and Career Council",
